@@ -2,17 +2,20 @@
 .app-container {
   display: flex;
   justify-content: center;
-  margin: 50 100px;
+  margin: 200px;
+  border: solid cadetblue;
 }
 
 /* Left Panel styles */
 .homePage {
   flex: 1;
   padding: 20px;
+  border: solid cornflowerblue;
 }
 
 .homePage h2 {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .homePage input {
@@ -45,10 +48,12 @@
 .employeePage {
   flex: 1;
   padding: 20px;
+  border: solid lightcoral;
 }
 
 .employeePage h2 {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .employeePage p {
