@@ -1,20 +1,24 @@
-import EmployeeList from "./EmployeeList";
-import { useState, useEffect } from "react";
+import React from "react";
 
-function HomePage() {
-    const [contacts] = useState(null);
-
-    useEffect(() => {
-      const fetchData = async () => {
-        const res = await fetch("https://jsonplaceholder.typicode.com/users");
-        const data = await res.json();
-      };
-      fetchData();
-    }, []);
+function HomePage({ employees, handleEmployeeClick }) {
   return (
-    <div className="HomePage">
+    <div className="homePage">
       <h2>Employee Directory</h2>
-      <EmployeeList contacts={contacts}/>
+      {/* Search bar */}
+      <input type="text" placeholder="Search..." />
+      {/* List of Employees */}
+      <ul>
+        {employees.map((employee) => (
+          <li key={employee.id} onClick={() => handleEmployeeClick(employee)}>
+            <img src={employee.photoUrl} alt={`Avatar for ${employee.name}`} />
+            <div>
+              <p>Name: {employee.name}</p>
+              <p>Email: {employee.email}</p>
+              <p>Company: {employee.company.name}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

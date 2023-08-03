@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Employee Directory container */
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 50 100px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Left Panel styles */
+.homePage {
+  flex: 1;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homePage h2 {
+  margin-bottom: 10px;
+}
+
+.homePage input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.homePage ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.homePage li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.homePage li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Right Panel styles */
+.employeePage {
+  flex: 1;
+  padding: 20px;
+}
+
+.employeePage h2 {
+  margin-bottom: 10px;
+}
+
+.employeePage p {
+  margin-bottom: 8px;
 }
