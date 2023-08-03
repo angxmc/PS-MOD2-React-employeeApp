@@ -9,7 +9,7 @@ function EmployeePage({ selectedEmployee }) {
           <h3>{selectedEmployee.name}</h3>
           <p>Email: {selectedEmployee.email}</p>
           <p>Company: {selectedEmployee.company.name}</p>
-          {/* Add more details if needed */}
+          
         </div>
       ) : (
         <p>Select an employee from the list to see details.</p>
